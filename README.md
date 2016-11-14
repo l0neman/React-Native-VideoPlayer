@@ -4,17 +4,17 @@
 
 - `resizeMode='contain'` (原始视频比例，控件边缘可能会出现空白)
 
- ![contain_mode0](https://github.com/wangruning/MyFlowLayout/blob/master/image/contain_mode0.png)
+ ![contain_mode0](https://github.com/wangruning/React-Native-VideoPlayer/blob/master/image/contain_mode0.png)
 
- ![contain_mode1](https://github.com/wangruning/MyFlowLayout/blob/master/image/contain_mode1.png)
+ ![contain_mode1](https://github.com/wangruning/React-Native-VideoPlayer/blob/master/image/contain_mode1.png)
 
 - `resizeMode='cover'` (剪切画面，控件不会产生空白，但视频画面会被裁剪)
 
- ![cover_mode](https://github.com/wangruning/MyFlowLayout/blob/master/image/cover_mode.png)
+ ![cover_mode](https://github.com/wangruning/React-Native-VideoPlayer/blob/master/image/cover_mode.png)
 
 - `resizeMode='stretch'` (视频填充屏幕，画面将可能出现拉伸)
 
- ![stretch_mode](https://github.com/wangruning/MyFlowLayout/blob/master/image/stretch_mode.png)
+ ![stretch_mode](https://github.com/wangruning/React-Native-VideoPlayer/blob/master/image/stretch_mode.png)
 
 ## 导入
 
