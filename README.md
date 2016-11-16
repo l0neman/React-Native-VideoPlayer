@@ -25,11 +25,11 @@
    ```java
    @Override
    protected List<ReactPackage> getPackages() {
-   	return Arrays.<ReactPackage>asList(
-       	new MainReactPackage(),
-           	new VideoPlayerModule.RCTVideoPlaerPackage()
-           );
-      }
+       return Arrays.<ReactPackage>asList(
+           new MainReactPackage(),
+           new VideoPlayerModule.RCTVideoPlaerPackage()
+       );
+   }
    ```
 
    最后把 `native/VideoPlayerAndroid.js` 导入
@@ -50,13 +50,13 @@
    ```java
    @Override
    protected void onCreate(@Nullable Bundle savedInstanceState) {
-   	super.onCreate(savedInstanceState);
+       super.onCreate(savedInstanceState);
 
-     	VideoPlayer mVideoPlayer = (VideoPlayer) findViewById(R.id.vPlayer);
+       VideoPlayer mVideoPlayer = (VideoPlayer) findViewById(R.id.vPlayer);
 
-     	mVideoPlayer.setUrl("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
-     	mVideoPlayer.enableAuto();
-     	mVideoPlayer.setResizeMode(VideoPlayer.RESIZE_MODE_CONTAIN);
+       mVideoPlayer.setUrl("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+       mVideoPlayer.enableAuto();
+       mVideoPlayer.setResizeMode(VideoPlayer.RESIZE_MODE_CONTAIN);
    }
    ```
 
@@ -79,10 +79,10 @@
                autoPlay={false} />
        }
 
-   	_enterNextPage() {
+       _enterNextPage() {
            videoPlayer.stop(); //停止videoPlayer播放
            //...
-   	}
+       }
    }
    ```
 
