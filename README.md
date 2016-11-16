@@ -12,7 +12,7 @@
 
  ![cover_mode](https://github.com/wangruning/React-Native-VideoPlayer/blob/master/image/cover_mode.png)
 
-- `resizeMode='stretch'` (视频填充屏幕，画面将可能出现拉伸)
+- `resizeMode='stretch'` (视频填充控件，画面将可能出现拉伸)
 
  ![stretch_mode](https://github.com/wangruning/React-Native-VideoPlayer/blob/master/image/stretch_mode.png)
 
@@ -32,7 +32,7 @@
       }
    ```
 
-   需要把 `native/VideoPlayerAndroid.js` 导入后即可编译运行
+   最后把 `native/VideoPlayerAndroid.js` 导入
 
 ## 使用
 
@@ -40,7 +40,7 @@
 
    ```xml
    <com.reactnativevideoplayer.view.VideoPlayer
-   	android:id="@+id/vPlayer"
+       android:id="@+id/vPlayer"
        android:layout_width="match_parent"
        android:layout_height="300dp" />
    ```
@@ -50,7 +50,7 @@
    ```java
    @Override
    protected void onCreate(@Nullable Bundle savedInstanceState) {
-       super.onCreate(savedInstanceState);
+   	super.onCreate(savedInstanceState);
 
      	VideoPlayer mVideoPlayer = (VideoPlayer) findViewById(R.id.vPlayer);
 
@@ -62,27 +62,29 @@
 
    ​
 
-2. react-native中，在引入VideoPlayer.js，并在Component中使用
+2. react-native中，在js目录引入VideoPlayer.js，并在Component中使用
 
-```js
-//...
-import VideoPlayer from './native/VideoPlayerAndroid';
+   ```js
+   //...
+   import VideoPlayer from './native/VideoPlayerAndroid';
 
-export default class App extends Component {
+   export default class App extends Component {
 
-    render() {
-        return <VideoPlayer
-            style={{ flex: 2, flexDirection: 'column',backgroundColor: '#292929' }}
-            ref='videoPlayer'
-            resizeMode='contain'
-            uri='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
-            autoPlay={false} />
-    }
+       render() {
+           return <VideoPlayer
+               style={{ flex: 2, flexDirection: 'column',backgroundColor: '#292929' }}
+               ref='videoPlayer'
+               resizeMode='contain'
+               uri='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+               autoPlay={false} />
+       }
 
-	_enterNextPage() {
-        videoPlayer.stop(); //停止videoPlayer播放
-        //...
-	}
-}
-```
+   	_enterNextPage() {
+           videoPlayer.stop(); //停止videoPlayer播放
+           //...
+   	}
+   }
+   ```
+
+   ​
 
